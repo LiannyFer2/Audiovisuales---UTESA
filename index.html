@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>UTESA :: Audiovisuales</title>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <title>UTESA :: Audiovisuales</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <main class="wrapper">
+    <form class="form">
+      <h3>Equipos a solicitar:*</h3>
+
+      <div class="flex-col" style="gap: 0.5rem">
+        <label> <input type="checkbox" /> Proyector </label>
+
+        <label> <input type="checkbox" /> Laptop </label>
+
+        <label>
+          <input type="checkbox" />
+          Sonido(Solo seleccionar esta opción si se va a proyectar sonido)
+        </label>
+      </div>
+
+      <h3>Fecha de uso:*</h3>
+      <div class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col">
+          Fecha de uso:
+          <input type="date" min="2022-01-01" />
+        </label>
+
+        <div style="display: flex; justify-content: space-around">
+          <label class="flex-col" style="flex: 1">
+            Hora de Inicio
+            <input type="time" />
+          </label>
+
+          <label class="flex-col" style="flex: 1">
+            Hora de finalización
+            <input type="time" />
+          </label>
+        </div>
+      </div>
+
+      <h3>Especificaciones:*</h3>
+
+      <div>
+        <label class="flex-col" style="gap: 0.5rem">
+          Asignatura
+          <input type="text" placeholder="Inserte asignatura..." />
+        </label>
+
+        <label class="flex-col" style="gap: 0.5rem">
+          Aula
+          <input type="text" placeholder="Ej: C424..." />
+        </label>
+      </div>
+
+      <h3>Datos del estudiante:</h3>
+
+      <div class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col" style="gap: 0.5rem">
+          Nombre
+          <input type="text" placeholder="Inserte su nombre..." />
+        </label>
+        <label class="flex-col" style="gap: 0.5rem">
+          Matricula <input type="text" placeholder="Ej: 0-00-0000" />
+        </label>
+        <label class="flex-col" style="gap: 0.5rem">
+          Correo Institucional
+          <input type="text" placeholder="Ej: @alumno.utesa.edu" />
+        </label>
+        <label class="flex-col" style="gap: 0.5rem">
+          Telefono / Celular
+          <input placeholder="(000)-000-0000" type="tel" />
+        </label>
+      </div>
+
+      <h3>Datos del estudiante:</h3>
+
+      <div class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col" style="gap: 0.5rem">
+          Nombre del docente
+          <input type="text" placeholder="Inserte nombre del docente..." />
+        </label>
+
+        <label class="flex-col" style="gap: 0.5rem">
+          Código del docente
+          <input type="text" placeholder="Ej: 0-00-0000" />
+        </label>
+      </div>
+
+      <div style="display: flex; justify-content: center">
+        <button class="btn" type="submit">Enviar Solicitud</button>
+      </div>
+    </form>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
