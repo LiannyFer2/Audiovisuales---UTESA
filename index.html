@@ -14,16 +14,16 @@
 
 <body>
   <main class="wrapper">
-    <form class="form">
+    <form class="form" id="main-form">
       <h3>Equipos a solicitar:*</h3>
 
       <div class="flex-col" style="gap: 0.5rem">
-        <label> <input type="checkbox" /> Proyector </label>
+        <label> <input type="checkbox" name="cProyector" /> Proyector </label>
 
-        <label> <input type="checkbox" /> Laptop </label>
+        <label> <input type="checkbox" name="cLaptop" /> Laptop </label>
 
         <label>
-          <input type="checkbox" />
+          <input type="checkbox" name="cSonido" />
           Sonido(Solo seleccionar esta opción si se va a proyectar sonido)
         </label>
       </div>
@@ -32,18 +32,18 @@
       <div class="flex-col" style="gap: 0.5rem">
         <label class="flex-col">
           Fecha de uso:
-          <input type="date" min="2022-01-01" />
+          <input required name="fechaDeUso" type="date" min="2022-01-01" />
         </label>
 
         <div style="display: flex; justify-content: space-around">
           <label class="flex-col" style="flex: 1">
             Hora de Inicio
-            <input type="time" />
+            <input name="horaInicial" required type="time" />
           </label>
 
           <label class="flex-col" style="flex: 1">
             Hora de finalización
-            <input type="time" />
+            <input name="horaFinal" required type="time" />
           </label>
         </div>
       </div>
@@ -53,12 +53,12 @@
       <div>
         <label class="flex-col" style="gap: 0.5rem">
           Asignatura
-          <input type="text" placeholder="Inserte asignatura..." />
+          <input required name="asignatura" type="text" placeholder="Inserte asignatura..." />
         </label>
 
         <label class="flex-col" style="gap: 0.5rem">
           Aula
-          <input type="text" placeholder="Ej: C424..." />
+          <input required name="curso" type="text" placeholder="Ej: C424..." />
         </label>
       </div>
 
@@ -67,18 +67,20 @@
       <div class="flex-col" style="gap: 0.5rem">
         <label class="flex-col" style="gap: 0.5rem">
           Nombre
-          <input type="text" placeholder="Inserte su nombre..." />
+          <input name="nombreAlumno" required type="text" placeholder="Inserte su nombre..." />
         </label>
+
         <label class="flex-col" style="gap: 0.5rem">
-          Matricula <input type="text" placeholder="Ej: 0-00-0000" />
+          Matricula
+          <input required name="matriculaAlumno" type="text" placeholder="Ej: 0-00-0000" />
         </label>
         <label class="flex-col" style="gap: 0.5rem">
           Correo Institucional
-          <input type="text" placeholder="Ej: @alumno.utesa.edu" />
+          <input required name="correoAlumno" type="text" placeholder="Ej: @alumno.utesa.edu" />
         </label>
         <label class="flex-col" style="gap: 0.5rem">
           Telefono / Celular
-          <input placeholder="(000)-000-0000" type="tel" />
+          <input name="telefonoAlumno" required placeholder="(000)-000-0000" type="tel" />
         </label>
       </div>
 
@@ -87,12 +89,12 @@
       <div class="flex-col" style="gap: 0.5rem">
         <label class="flex-col" style="gap: 0.5rem">
           Nombre del docente
-          <input type="text" placeholder="Inserte nombre del docente..." />
+          <input required name="nombreDocente" type="text" placeholder="Inserte nombre del docente..." />
         </label>
 
         <label class="flex-col" style="gap: 0.5rem">
           Código del docente
-          <input type="text" placeholder="Ej: 0-00-0000" />
+          <input required name="codigoDocente" type="text" placeholder="Ej: 0-00-0000" />
         </label>
       </div>
 
