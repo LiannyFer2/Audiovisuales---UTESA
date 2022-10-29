@@ -1,109 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>UTESA :: Audiovisuales</title>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="/StyleForm/style-form.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Equipo</title>
 
 </head>
-
 <body>
-  <main class="wrapper">
-    <form class="form">
-      <h3>Equipos a solicitar:*</h3>
+  <div class="container">
 
-      <div class="flex-col">
-        <label> <input type="checkbox" /> Proyector </label>
+    <form id="form" class="form">
 
-        <label> <input type="checkbox" /> Laptop </label>
+      <h3>Equipos a solicitar: *</h3>
 
+      <div id="equipo" class="flex-col" style="gap: 0.5rem">
+        <label> <input type="checkbox" name="equipo" /> Proyector </label><br>
+        <label> <input type="checkbox" name="equipo" /> Laptop </label><br>
         <label>
-          <input type="checkbox" />
-          Sonido(Solo seleccionar esta opción si se va a proyectar sonido)
-        </label>
+          <input type="checkbox" name="equipo" />
+          Sonido (Solo seleccionar esta opción si se va a proyectar sonido)
+        </label><br>
+
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+<br>
+      <div class="form-control">
+        <label for="fecha_uso"">Fecha de uso</label>
+        <input type="date" placeholder="florinpop17" id="fecha" />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
       </div>
 
-      <h3>Fecha de uso:*</h3>
-      <div class="flex-col">
-        <label class="flex-col">
-          Fecha de uso:
-          <input type="date" min="2022-01-01" />
-        </label>
+      <div class=hora_inicio>
+      <div class="form-control">
+        <label for="hora_inicio"">Hora de inicio</label>
+        <input type="time" id="hora_inicio" />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+    </div>
+    <div class=hora_fin>
+      <div class="form-control">
+        <label for="hora_fin"">Hora de finalización</label>
+        <input type="time" id="hora_fin" />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+    </div>
 
-        <div class="time">
-          <label class="flex-col">
-            Hora de Inicio
-            <input type="time" />
-          </label>
+    <h3>Especificaciones: *</h3>
 
-          <label class="flex-col">
-            Hora de finalización
-            <input type="time" />
-          </label>
-        </div>
+    <div class="form-control">
+      <label for="asignatura"">Asignatura</label>
+      <input name="asignatura" id="asignatura" type="text" placeholder="Inserte asignatura..." />
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <label for="aula"">Aula</label>
+      <input id="aula" name="curso" type="text" placeholder="Ej: C424..." />
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
+
+    <h3>Datos del estudiante: *</h3>
+
+       <div class="form-control">
+      <label for="nombre"">Nombre</label>
+      <input id="nombre_est" name="nombre_est" type="text" placeholder="Nombre del estudiante..." />
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <label for="matricula"">Matrícula</label>
+      <input id="matricula" name="matricula" type="text" placeholder="Matrícula del estudiante..." />
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
+
+      <div class="form-control">
+        <label for="email">Correo institucional</label>
+        <input type="email" placeholder="@alumno.utesa.edu" id="email" />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="telefono">Teléfono/Celular</label>
+        <input type="text" placeholder="Telefono celular" id="telefono"/>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
       </div>
 
-      <h3>Especificaciones:*</h3>
+      <h3>Datos del docente: *</h3>
 
-      <div>
-        <label class="flex-col">
-          Asignatura
-          <input type="text" placeholder="Inserte asignatura..." />
-        </label>
+       <div class="form-control">
+      <label for="nombre_doc"">Nombre del docente</label>
+      <input id="nombre_doc" name="nombre_doc" type="text" placeholder="Nombre del docente..." />
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
 
-        <label class="flex-col" >
-          Aula
-          <input type="text" placeholder="Ej: C424..." />
-        </label>
+      <div class="form-control">
+        <label for="codigo_doc">Codigo del docente</label>
+        <input type="text" placeholder="Insertar el codigo del docente..." id="codigo_doc"/>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
       </div>
-
-      <h3>Datos del estudiante:</h3>
-
-      <div class="flex-col">
-        <label class="flex-col">
-          Nombre
-          <input type="text" placeholder="Inserte su nombre..." />
-        </label>
-        <label class="flex-col">
-          Matricula <input type="text" placeholder="Ej: 0-00-0000" />
-        </label>
-        <label class="flex-col">
-          Correo Institucional
-          <input type="text" placeholder="Ej: @alumno.utesa.edu" />
-        </label>
-        <label class="flex-col">
-          Telefono / Celular
-          <input placeholder="(000)-000-0000" type="tel" />
-        </label>
-      </div>
-
-      <h3>Datos del estudiante:</h3>
-
-      <div class="flex-col">
-        <label class="flex-col">
-          Nombre del docente
-          <input type="text" placeholder="Inserte nombre del docente..." />
-        </label>
-
-        <label class="flex-col">
-          Código del docente
-          <input type="text" placeholder="Ej: 0-00-0000" />
-        </label>
-      </div>
-
-      <div class="submit">
-        <button class="btn" type="submit">Enviar Solicitud</button>
-      </div>
+      <button>Submit</button>
     </form>
-  </main>
-  <script type="module" src="/main.js"></script>
-</body>
+  </div>
+  
+  
 
+
+  <script src="/main.js"></script>
+</body>
 </html>
