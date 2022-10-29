@@ -6,18 +6,20 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.png" />
   <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/StyleForm/style-form.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>el 
+
+</head>
 
 <body>
   <main class="wrapper">
     <form class="form">
       <h3>Equipos a solicitar:*</h3>
 
-      <div class="flex-col" style="gap: 0.5rem">
+      <div class="flex-col">
         <label> <input type="checkbox" /> Proyector </label>
 
         <label> <input type="checkbox" /> Laptop </label>
@@ -29,19 +31,19 @@
       </div>
 
       <h3>Fecha de uso:*</h3>
-      <div class="flex-col" style="gap: 0.5rem">
+      <div class="flex-col">
         <label class="flex-col">
           Fecha de uso:
           <input type="date" min="2022-01-01" />
         </label>
 
-        <div style="display: flex; justify-content: space-around">
-          <label class="flex-col" style="flex: 1">
+        <div class="time">
+          <label class="flex-col">
             Hora de Inicio
             <input type="time" />
           </label>
 
-          <label class="flex-col" style="flex: 1">
+          <label class="flex-col">
             Hora de finalización
             <input type="time" />
           </label>
@@ -51,12 +53,12 @@
       <h3>Especificaciones:*</h3>
 
       <div>
-        <label class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col">
           Asignatura
           <input type="text" placeholder="Inserte asignatura..." />
         </label>
 
-        <label class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col" >
           Aula
           <input type="text" placeholder="Ej: C424..." />
         </label>
@@ -64,19 +66,19 @@
 
       <h3>Datos del estudiante:</h3>
 
-      <div class="flex-col" style="gap: 0.5rem">
-        <label class="flex-col" style="gap: 0.5rem">
+      <div class="flex-col">
+        <label class="flex-col">
           Nombre
           <input type="text" placeholder="Inserte su nombre..." />
         </label>
-        <label class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col">
           Matricula <input type="text" placeholder="Ej: 0-00-0000" />
         </label>
-        <label class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col">
           Correo Institucional
           <input type="text" placeholder="Ej: @alumno.utesa.edu" />
         </label>
-        <label class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col">
           Telefono / Celular
           <input placeholder="(000)-000-0000" type="tel" />
         </label>
@@ -84,19 +86,19 @@
 
       <h3>Datos del estudiante:</h3>
 
-      <div class="flex-col" style="gap: 0.5rem">
-        <label class="flex-col" style="gap: 0.5rem">
+      <div class="flex-col">
+        <label class="flex-col">
           Nombre del docente
           <input type="text" placeholder="Inserte nombre del docente..." />
         </label>
 
-        <label class="flex-col" style="gap: 0.5rem">
+        <label class="flex-col">
           Código del docente
           <input type="text" placeholder="Ej: 0-00-0000" />
         </label>
       </div>
 
-      <div style="display: flex; justify-content: center">
+      <div class="submit">
         <button class="btn" type="submit">Enviar Solicitud</button>
       </div>
     </form>

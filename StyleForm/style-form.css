@@ -1,0 +1,15 @@
+.flex-col {
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.time {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
