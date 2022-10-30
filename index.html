@@ -22,19 +22,19 @@
       
       <h3>Equipos a solicitar: *</h3>
 
-      <div id="equipo">
+      <div class="flex-col" id="equipo">
         <label> <input type="checkbox" name="equipo" /> Proyector </label><br>
         <label> <input type="checkbox" name="equipo" /> Laptop </label><br>
         <label>
           <input type="checkbox" name="equipo" />
           Sonido (Solo seleccionar esta opción si se va a proyectar sonido)
-        </label><br>
+        </label>
 
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
 
       </div>
-<br><br>
+
       <div class="form-control">
         <label for="fecha_uso">Fecha de uso</label>
         <input type="date" placeholder="florinpop17" id="fecha" />
@@ -43,24 +43,23 @@
         <small>Error message</small>
       </div>
 
-      <div class=hora_inicio>
-      <div class="form-control">
-        <label for="hora_inicio">Hora de inicio</label>
-        <input type="time" id="hora_inicio" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
+      <div class="aside-inputs">
+        <div class="form-control">
+          <label for="hora_inicio">Hora de inicio</label>
+          <input type="time" id="hora_inicio" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label for="hora_fin">Hora de finalización</label>
+          <input type="time" id="hora_fin" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
       </div>
-    </div>
-    <div class=hora_fin>
-      <div class="form-control">
-        <label for="hora_fin">Hora de finalización</label>
-        <input type="time" id="hora_fin" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-    </div>
 
     <h3>Especificaciones: *</h3>
 
