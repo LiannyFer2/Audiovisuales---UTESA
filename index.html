@@ -20,9 +20,9 @@
 
     <form id="form" class="form">
       
-      <h3 style="margin-top: 30px;">Equipos a solicitar: *</h3>
+      <h3>Equipos a solicitar: *</h3>
 
-      <div id="equipo" class="flex-col" style="gap: 0.5rem">
+      <div id="equipo">
         <label> <input type="checkbox" name="equipo" /> Proyector </label><br>
         <label> <input type="checkbox" name="equipo" /> Laptop </label><br>
         <label>
@@ -36,7 +36,7 @@
       </div>
 <br><br>
       <div class="form-control">
-        <label for="fecha_uso"">Fecha de uso</label>
+        <label for="fecha_uso">Fecha de uso</label>
         <input type="date" placeholder="florinpop17" id="fecha" />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
@@ -45,7 +45,7 @@
 
       <div class=hora_inicio>
       <div class="form-control">
-        <label for="hora_inicio"">Hora de inicio</label>
+        <label for="hora_inicio">Hora de inicio</label>
         <input type="time" id="hora_inicio" />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
@@ -54,7 +54,7 @@
     </div>
     <div class=hora_fin>
       <div class="form-control">
-        <label for="hora_fin"">Hora de finalización</label>
+        <label for="hora_fin">Hora de finalización</label>
         <input type="time" id="hora_fin" />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
@@ -65,7 +65,7 @@
     <h3>Especificaciones: *</h3>
 
     <div class="form-control">
-      <label for="asignatura"">Asignatura</label>
+      <label for="asignatura">Asignatura</label>
       <input name="asignatura" id="asignatura" type="text" placeholder="Inserte asignatura..." />
       <i class="fas fa-check-circle"></i>
       <i class="fas fa-exclamation-circle"></i>
@@ -73,7 +73,7 @@
     </div>
 
     <div class="form-control">
-      <label for="aula"">Aula</label>
+      <label for="aula">Aula</label>
       <input id="aula" name="curso" type="text" placeholder="Ej: C424..." />
       <i class="fas fa-check-circle"></i>
       <i class="fas fa-exclamation-circle"></i>
@@ -83,7 +83,7 @@
     <h3>Datos del estudiante: *</h3>
 
        <div class="form-control">
-      <label for="nombre"">Nombre</label>
+      <label for="nombre">Nombre</label>
       <input id="nombre_est" name="nombre_est" type="text" placeholder="Nombre del estudiante..." />
       <i class="fas fa-check-circle"></i>
       <i class="fas fa-exclamation-circle"></i>
@@ -91,7 +91,7 @@
     </div>
 
     <div class="form-control">
-      <label for="matricula"">Matrícula</label>
+      <label for="matricula">Matrícula</label>
       <input id="matricula" name="matricula" type="text" placeholder="Matrícula del estudiante..." />
       <i class="fas fa-check-circle"></i>
       <i class="fas fa-exclamation-circle"></i>
@@ -105,6 +105,7 @@
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
       </div>
+
       <div class="form-control">
         <label for="telefono">Teléfono/Celular</label>
         <input type="text" placeholder="Telefono celular" id="telefono"/>
@@ -116,7 +117,7 @@
       <h3>Datos del docente: *</h3>
 
        <div class="form-control">
-      <label for="nombre_doc"">Nombre del docente</label>
+      <label for="nombre_doc">Nombre del docente</label>
       <input id="nombre_doc" name="nombre_doc" type="text" placeholder="Nombre del docente..." />
       <i class="fas fa-check-circle"></i>
       <i class="fas fa-exclamation-circle"></i>
@@ -134,9 +135,6 @@
     </form>
   </div>
   
-  
-
-
   <script src="/main.js"></script>
 </body>
 </html>
