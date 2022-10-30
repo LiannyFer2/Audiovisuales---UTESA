@@ -5,11 +5,19 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	min-height: 100vh;
+  display: flex;
+  justify-content: center;
 	margin: 0;
+}
+
+.header {
+  width: 1899px;
+  height: 62px;
+  background: #003300;
+  position: fixed;
+  float: left;
+  background-color: #006600;
 }
 
 .container {
@@ -17,8 +25,14 @@ body {
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
-	width: 600px;
+	width: 60%;
+  margin-top: 82px;
 	max-width: 100%;
+}
+
+.bar {
+  height: 411px;
+  border: solid black;
 }
 
 .form {
@@ -26,7 +40,6 @@ body {
 }
 
 .cajas {
-  position: absolute;
   border: solid black;
 }
 
@@ -42,14 +55,12 @@ body {
 .hora_fin {
   width: 50%;
   float: left;
-  position: relative;
 }
 
 
 .form-control {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
-	position: relative;
 }
 
 .form-control label {

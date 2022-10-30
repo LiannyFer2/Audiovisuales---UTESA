@@ -49,69 +49,69 @@ function checkInputs() {
     const codigo_docValue = codigo_doc.value.trim();
 	
 	if(fechaValue === '') {
-		setErrorFor(fecha, 'La fecha no puede estar vacia');
+		setErrorFor(fecha);
 	} else {
 		setSuccessFor(fecha);
 	}
 
     if(hora_inicioValue === '') {
-		setErrorFor(hora_inicio, 'La hora inicio no puede estar vacia');
+		setErrorFor(hora_inicio);
 	} else {
 		setSuccessFor(hora_inicio);
 	}
 
     if(hora_finValue === '') {
-		setErrorFor(hora_fin, 'La hora final no puede estar vacia');
+		setErrorFor(hora_fin);
 	} else {
 		setSuccessFor(hora_fin);
 	}
 
     if(asignaturaValue === '') {
-		setErrorFor(asignatura, 'La asignatura no puede estar vacia');
+		setErrorFor(asignatura);
 	} else {
 		setSuccessFor(asignatura);
 	}
 
     if(aulaValue === '') {
-		setErrorFor(aula, 'El aula no puede estar vacia');
+		setErrorFor(aula);
 	} else {
 		setSuccessFor(aula);
 	}
 
     if(nombre_estValue === '') {
-		setErrorFor(nombre_est, 'El nombre del estudiante no puede estar vacia');
+		setErrorFor(nombre_est);
 	} else {
 		setSuccessFor(nombre_est);
 	}
 
     if(matriculaValue === '') {
-		setErrorFor(matricula, 'La matricula del estudiante no puede estar vacia');
+		setErrorFor(matricula);
 	} else {
 		setSuccessFor(matricula);
 	}
 		
 	if(emailValue === '') {
-		setErrorFor(email, 'El correo no puede estar vacio');
+		setErrorFor(email);
 	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Not a valid email');
+		setErrorFor(email);
 	} else {
 		setSuccessFor(email);
 	}
 	
 	if(telefonoValue === '') {
-		setErrorFor(telefono, 'El telefono no puede estar vacio');
+		setErrorFor(telefono);
 	} else {
 		setSuccessFor(telefono);
 	}
 
     if(nombre_docValue === '') {
-		setErrorFor(nombre_doc, 'El nombre del docente no puede estar vacio');
+		setErrorFor(nombre_doc);
 	} else {
 		setSuccessFor(nombre_doc);
 	}
 
     if(codigo_docValue === '') {
-		setErrorFor(codigo_doc, 'El codigo del docente no puede estar vacio');
+		setErrorFor(codigo_doc);
 	} else {
 		setSuccessFor(codigo_doc);
 	}
