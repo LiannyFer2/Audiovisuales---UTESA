@@ -33,6 +33,10 @@ equipo.addEventListener('change', (e) => {
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
+  const data = new FormData(form)
+
+  console.log(data)
+
   checkInputs()
 })
 
@@ -149,4 +153,3 @@ modalButton.addEventListener('click', () => {
     modal.showModal()
   }
 })
-

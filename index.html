@@ -59,10 +59,10 @@
       <h3>Equipos a solicitar: *</h3>
 
       <div class="flex-col" id="equipo">
-        <label> <input type="checkbox" name="equipo" /> Proyector </label><br />
-        <label> <input type="checkbox" name="equipo" /> Laptop </label><br />
+        <label> <input type="checkbox" name="cProyector" /> Proyector </label><br />
+        <label> <input type="checkbox" name="cLaptop" /> Laptop </label><br />
         <label>
-          <input type="checkbox" name="equipo" />
+          <input type="checkbox" name="cSonido" />
           Sonido (Solo seleccionar esta opción si se va a proyectar sonido)
         </label>
 
@@ -72,7 +72,7 @@
 
       <div class="form-control">
         <label for="fecha_uso">Fecha de uso</label>
-        <input type="date" placeholder="florinpop17" id="fecha" />
+        <input type="date" name="fechaDeUso" id="fecha" required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -81,7 +81,7 @@
       <div class="aside-inputs">
         <div class="form-control">
           <label for="hora_inicio">Hora de inicio</label>
-          <input type="time" id="hora_inicio" />
+          <input type="time" name="horaInicio" id="hora_inicio" required />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -89,7 +89,7 @@
 
         <div class="form-control">
           <label for="hora_fin">Hora de finalización</label>
-          <input type="time" id="hora_fin" />
+          <input type="time" name="horaFinal" id="hora_fin" required />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -100,7 +100,7 @@
 
       <div class="form-control">
         <label for="asignatura">Asignatura</label>
-        <input name="asignatura" id="asignatura" type="text" placeholder="Inserte asignatura..." />
+        <input type="text" name="asignatura" placeholder="Inserte asignatura..." id="asignatura" required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -108,7 +108,7 @@
 
       <div class="form-control">
         <label for="aula">Aula</label>
-        <input id="aula" name="curso" type="text" placeholder="Ej: C424..." />
+        <input type="text" name="curso" id="aula" placeholder="Ej: C424..." required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -118,7 +118,7 @@
 
       <div class="form-control">
         <label for="nombre">Nombre</label>
-        <input id="nombre_est" name="nombre_est" type="text" placeholder="Nombre del estudiante..." />
+        <input type="text" name="nombreEstudiante" id="nombre_est" placeholder="Nombre del estudiante..." required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -126,7 +126,7 @@
 
       <div class="form-control">
         <label for="matricula">Matrícula</label>
-        <input id="matricula" name="matricula" type="text" placeholder="Matrícula del estudiante..." />
+        <input type="text" name="matricula" id="matricula" placeholder="Matrícula del estudiante..." required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -134,7 +134,7 @@
 
       <div class="form-control">
         <label for="email">Correo institucional</label>
-        <input type="email" placeholder="@alumno.utesa.edu" id="email" />
+        <input type="email" name="correoEstudiante" placeholder="@alumno.utesa.edu" id="email" required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -142,7 +142,7 @@
 
       <div class="form-control">
         <label for="telefono">Teléfono/Celular</label>
-        <input type="text" placeholder="Telefono celular" id="telefono" />
+        <input type="tel" name="telefonoEstudiante" placeholder="Telefono celular" id="telefono" required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -152,7 +152,7 @@
 
       <div class="form-control">
         <label for="nombre_doc">Nombre del docente</label>
-        <input id="nombre_doc" name="nombre_doc" type="text" placeholder="Nombre del docente..." />
+        <input type="text" name="nombreDocente" id="nombre_doc" placeholder="Nombre del docente..." required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -160,16 +160,17 @@
 
       <div class="form-control">
         <label for="codigo_doc">Codigo del docente</label>
-        <input type="text" placeholder="Insertar el codigo del docente..." id="codigo_doc" />
+        <input type="text" name="codigoDocente" placeholder="Insertar el codigo del docente..." id="codigo_doc" required />
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
       </div>
-      <button>Enviar Solicitud</button>
+
+      <button type="submit">Enviar Solicitud</button>
     </form>
   </main>
 
-  <script src="/main.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>
