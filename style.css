@@ -20,22 +20,13 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  width: min(800px, 90%);
+  width: min(800px, 95%);
   margin-block: 1rem;
   max-width: 100%;
 }
 
-.bar {
-  height: 411px;
-  border: solid black;
-}
-
 .form {
-  padding: 30px 40px;
-}
-
-.cajas {
-  border: solid black;
+  padding: 2rem;
 }
 
 .check {
@@ -61,22 +52,16 @@ body {
 /* Modal  */
 
 .info {
-  color: white;
-  height: 320px;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 18px;
-  padding: 30px 40px;
+  color: #fff;
+  padding: 1rem;
   border-radius: 5px;
   text-align: center;
   background-color: rgba(0, 102, 0, 0.664);
 }
 
 .info img {
-  border-radius: 105px;
+  border-radius: 50%;
   width: 120px;
-  height: 120px;
 }
 
 .modal-container {
@@ -129,41 +114,16 @@ body {
   height: 20%;
 }
 
-.h3 {
-  margin-top: 5px;
-}
-
 .cta {
-  margin-top: -5px;
   background-color: #ff8837;
-  width: 250px;
-  height: 30px;
-  color: white;
+  color: #fff;
   border-radius: 5px;
-  border: #ff8837 solid;
+  border: 1px solid #fff;
   padding: 0.5em 1.2em;
-  transition: all 1s ease;
-  cursor: pointer;
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .cta:hover {
-  background: #ffcc00;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.755);
-  border: #ffcc00 solid;
-  color: #fff !important;
-}
-
-.Texto-info {
-  height: 100px;
-  text-align: justify;
-}
-
-.bar {
-  height: 411px;
-  border: solid black;
+  filter: brightness(120%);
 }
 
 .form-control {
