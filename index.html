@@ -1,162 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solicitud de Equipo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitud de Equipo</title>
+  </head>
 
-</head>
-<body>
-
-
-  <div class="modal-container">
-    <div class="modal modal-close">
-        <p class="close">X</p>
-        <div class="modal-textos">
-          <h1><center>Audiovisuales y Multimedia</center></h1>
-          <p>Este formulario se completa aproximadamente en 7 minutos. Uso interno institucional.</p>
-          <ul>
-            <li>Para llenar este formulario, debe tener el correo institucional activo</li>
-            <li>Los servicios se trabajarán por orden de llegada</li>
-          </ul>
-
-          <p><b>Nota: Este formulario debe ser entregado con siente (7) días de anticipación</b></p>
-          <p>Para mayor Información comunicarse al (809) 582 7156 ext 262. Correo electrónico: adamtburdo@utesa.edu</p>
-          <p>La universidad tecnológiga de santiago, utesa, garantiza el respeto a la intimidad y dignidad en el datos personales.</p>
+  <body>
+    <div class="modal-container">
+      <div class="modal modal-close">
+          <p class="close">X</p>
+          <div class="modal-textos">
+            <h1><center>Audiovisuales y Multimedia</center></h1>
+            <p>Este formulario se completa aproximadamente en 7 minutos. Uso interno institucional.</p>
+            <ul>
+              <li>Para llenar este formulario, debe tener el correo institucional activo</li>
+              <li>Los servicios se trabajarán por orden de llegada</li>
+            </ul>
+  
+            <p><b>Nota: Este formulario debe ser entregado con siente (7) días de anticipación</b></p>
+            <p>Para mayor Información comunicarse al (809) 582 7156 ext 262. Correo electrónico: adamtburdo@utesa.edu</p>
+            <p>La universidad tecnológiga de santiago, utesa, garantiza el respeto a la intimidad y dignidad en el datos personales.</p>
+          </div>
+      </div>
+    </div>
+  
+    <main class="container">
+      <header class="info">
+        <img src="/imgs/logo.jpg" alt="">
+        <div class="Texto-info">
+          <h1><center>Formulario de servicios de Audiovisuales UTESA</center></h1>
+          <h3 class="h3"><center>Leer antes de llenar formulario.</center></h3>
+          
+          <center><button class="cta"><b> Información importante</b></button></center>
         </div>
-    </div>
-  </div>
-
-  <div class="container">
-    
-    <div class="info">
-      <img src="/imgs/logo.jpg" alt="">
-      <div class="Texto-info">
-        <h1><center>Formulario de servicios de Audiovisuales UTESA</center></h1>
-        <h3 class="h3"><center>Leer antes de llenar formulario.</center></h3>
-        
-        <center><button class="cta"><b> Información importante</b></button></center>
-      </div>
-    </div>  
-    <form id="form" class="form">
+      </header>  
       
-      <h3 style="margin-top: 30px;">Equipos a solicitar: *</h3>
+      <form id="form" class="form">
+        <h3>Equipos a solicitar: *</h3>
 
-      <div id="equipo" class="flex-col" style="gap: 0.5rem">
-        <label> <input type="checkbox" name="equipo" /> Proyector </label><br>
-        <label> <input type="checkbox" name="equipo" /> Laptop </label><br>
-        <label>
-          <input type="checkbox" name="equipo" />
-          Sonido (Solo seleccionar esta opción si se va a proyectar sonido)
-        </label><br>
+        <div class="flex-col" id="equipo">
+          <label> <input type="checkbox" name="equipo" /> Proyector </label
+          ><br />
+          <label> <input type="checkbox" name="equipo" /> Laptop </label><br />
+          <label>
+            <input type="checkbox" name="equipo" />
+            Sonido (Solo seleccionar esta opción si se va a proyectar sonido)
+          </label>
 
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
 
-      </div>
-<br><br>
-      <div class="form-control">
-        <label for="fecha_uso"">Fecha de uso</label>
-        <input type="date" placeholder="florinpop17" id="fecha" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
+        <div class="form-control">
+          <label for="fecha_uso">Fecha de uso</label>
+          <input type="date" placeholder="florinpop17" id="fecha" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-      <div class=hora_inicio>
-      <div class="form-control">
-        <label for="hora_inicio"">Hora de inicio</label>
-        <input type="time" id="hora_inicio" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-    </div>
-    <div class=hora_fin>
-      <div class="form-control">
-        <label for="hora_fin"">Hora de finalización</label>
-        <input type="time" id="hora_fin" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-    </div>
+        <div class="aside-inputs">
+          <div class="form-control">
+            <label for="hora_inicio">Hora de inicio</label>
+            <input type="time" id="hora_inicio" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
 
-    <h3>Especificaciones: *</h3>
+          <div class="form-control">
+            <label for="hora_fin">Hora de finalización</label>
+            <input type="time" id="hora_fin" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
 
-    <div class="form-control">
-      <label for="asignatura"">Asignatura</label>
-      <input name="asignatura" id="asignatura" type="text" placeholder="Inserte asignatura..." />
-      <i class="fas fa-check-circle"></i>
-      <i class="fas fa-exclamation-circle"></i>
-      <small>Error message</small>
-    </div>
+        <h3>Especificaciones: *</h3>
 
-    <div class="form-control">
-      <label for="aula"">Aula</label>
-      <input id="aula" name="curso" type="text" placeholder="Ej: C424..." />
-      <i class="fas fa-check-circle"></i>
-      <i class="fas fa-exclamation-circle"></i>
-      <small>Error message</small>
-    </div>
+        <div class="form-control">
+          <label for="asignatura">Asignatura</label>
+          <input
+            name="asignatura"
+            id="asignatura"
+            type="text"
+            placeholder="Inserte asignatura..."
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-    <h3>Datos del estudiante: *</h3>
+        <div class="form-control">
+          <label for="aula">Aula</label>
+          <input id="aula" name="curso" type="text" placeholder="Ej: C424..." />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-       <div class="form-control">
-      <label for="nombre"">Nombre</label>
-      <input id="nombre_est" name="nombre_est" type="text" placeholder="Nombre del estudiante..." />
-      <i class="fas fa-check-circle"></i>
-      <i class="fas fa-exclamation-circle"></i>
-      <small>Error message</small>
-    </div>
+        <h3>Datos del estudiante: *</h3>
 
-    <div class="form-control">
-      <label for="matricula"">Matrícula</label>
-      <input id="matricula" name="matricula" type="text" placeholder="Matrícula del estudiante..." />
-      <i class="fas fa-check-circle"></i>
-      <i class="fas fa-exclamation-circle"></i>
-      <small>Error message</small>
-    </div>
+        <div class="form-control">
+          <label for="nombre">Nombre</label>
+          <input
+            id="nombre_est"
+            name="nombre_est"
+            type="text"
+            placeholder="Nombre del estudiante..."
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-      <div class="form-control">
-        <label for="email">Correo institucional</label>
-        <input type="email" placeholder="@alumno.utesa.edu" id="email" />
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-      <div class="form-control">
-        <label for="telefono">Teléfono/Celular</label>
-        <input type="text" placeholder="Telefono celular" id="telefono"/>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
+        <div class="form-control">
+          <label for="matricula">Matrícula</label>
+          <input
+            id="matricula"
+            name="matricula"
+            type="text"
+            placeholder="Matrícula del estudiante..."
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-      <h3>Datos del docente: *</h3>
+        <div class="form-control">
+          <label for="email">Correo institucional</label>
+          <input type="email" placeholder="@alumno.utesa.edu" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-       <div class="form-control">
-      <label for="nombre_doc"">Nombre del docente</label>
-      <input id="nombre_doc" name="nombre_doc" type="text" placeholder="Nombre del docente..." />
-      <i class="fas fa-check-circle"></i>
-      <i class="fas fa-exclamation-circle"></i>
-      <small>Error message</small>
-    </div>
+        <div class="form-control">
+          <label for="telefono">Teléfono/Celular</label>
+          <input type="text" placeholder="Telefono celular" id="telefono" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-      <div class="form-control">
-        <label for="codigo_doc">Codigo del docente</label>
-        <input type="text" placeholder="Insertar el codigo del docente..." id="codigo_doc"/>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error message</small>
-      </div>
-      <button>Enviar solicitud</button>
-    </form>
+        <h3>Datos del docente: *</h3>
 
-</div>
+        <div class="form-control">
+          <label for="nombre_doc">Nombre del docente</label>
+          <input
+            id="nombre_doc"
+            name="nombre_doc"
+            type="text"
+            placeholder="Nombre del docente..."
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
 
-  <script src="/main.js"></script>
-</body>
+        <div class="form-control">
+          <label for="codigo_doc">Codigo del docente</label>
+          <input
+            type="text"
+            placeholder="Insertar el codigo del docente..."
+            id="codigo_doc"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button>Enviar Solicitud</button>
+      </form>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
 </html>
