@@ -19,6 +19,11 @@ background-color: #f7fdf3;
     background: rgba(0, 51, 0, 0.818);;
 }
 
+.sesion h2 {
+    margin-top: 9px;
+    margin-left: 40px;
+}
+
 .container {
     margin-top: 62px;
     width: 100%;
@@ -26,6 +31,7 @@ background-color: #f7fdf3;
 
 .menu {
     height: 100%;
+    margin-left: -120px;
     width: 145px;
     float: left;
     position: fixed;   
@@ -44,7 +50,7 @@ background-color: #f7fdf3;
 
 h2 {
     color: #fff;
-    margin-top: 17px;
+    margin-top: 27px;
     margin-left: 25px;
     float: left;
 }
@@ -53,9 +59,9 @@ h2 {
     color: #fff;
     float: right;
     display: flex;
-    margin-top: 22px;
+    margin-top: 20px;
     text-decoration: none;
-    margin-right: 15px;
+    margin-right: 25px;
     text-transform: uppercase;
 }
 
@@ -93,8 +99,8 @@ h2 {
     height: 100%;
     float: left;
     position: fixed;
-    margin-left: 145px;
-    width: 100%;
+    margin-left: 25px;
+    width: 90.5%;
     padding: 2rem 2rem 4rem 1rem;
 
 }
@@ -105,3 +111,4 @@ h2 {
     margin-right: 155px;
     margin-top: 50px;
 }
+
