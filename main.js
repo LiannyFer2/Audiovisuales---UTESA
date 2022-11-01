@@ -74,8 +74,11 @@ function checkInputs() {
 
   if (asignaturaValue === '') {
     setErrorFor(asignatura)
+    
   } else {
+    
     setSuccessFor(asignatura)
+   
   }
 
   if (aulaValue === '') {
@@ -94,6 +97,7 @@ function checkInputs() {
     setErrorFor(matricula)
   } else {
     setSuccessFor(matricula)
+    
   }
 
   if (emailValue === '') {
@@ -153,3 +157,5 @@ modalButton.addEventListener('click', () => {
     modal.showModal()
   }
 })
+
+
