@@ -1,0 +1,29 @@
+/* Basic reset */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+min-height: 100vh;
+display: flex;
+margin: 0;
+background-color: #f7fdf3;
+}
+
+.sesion {
+    height: 62px;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 51, 0, 0.84);;
+}
+
+.menu {
+    height: 100%;
+    width: 110px;
+    margin-top: 62px;
+    float: left;
+    position: fixed;
+    background: #0d5634b6;
+}
