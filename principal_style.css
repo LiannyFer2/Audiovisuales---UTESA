@@ -107,11 +107,16 @@ h2 {
 
 .ticket h1 {
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     margin-right: 155px;
     margin-top: 1   0px;
 }
 
-.table {
+.btn-group {
     margin-top: 60px;
+    margin-left: 32%;
+}
+
+.table {
+    margin-top: 50px;
 }
