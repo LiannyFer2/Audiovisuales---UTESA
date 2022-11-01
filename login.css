@@ -1,0 +1,78 @@
+/* Basic reset */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: #c4c9c1f7;
+  }
+
+
+.dive{
+    margin: 120px;
+    padding: 5px;
+    width: 29%;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.dive .letras{
+    margin: 20px;
+    padding: 8px;
+    width: 95%;
+    background-color: white;
+}
+
+
+.panel{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -1%;
+    color: green;
+}
+
+.panel-2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -20px;
+    color: green;
+}
+
+
+
+  
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
+    margin-top: 55%;
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+  }
+ 
+  .form-control {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    height: 40px;
+   margin: 15px;
+  }
+
+
+
+
+
+
+
+  
+  
+  
+  
+  

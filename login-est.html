@@ -1,72 +1,45 @@
-<!doctype html>
-<html class="no-js" lang="es" xml:lang="es">
-    <head>
-        <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login-Est</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-   
-   
-   </head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login estudiante</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="dive">
+    <div class="letras">
+    <h3 class="panel">Panel de acceso</h3>
+    <h3 class="panel-2">SISTEMA DE SERVICIOS AUDIOVISUALES</h3>
+   </div>
 
-<form action="">
-    <!--formulario estudiante--><div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-   <form action="https://www.utesa.edu/webestudi/conexion.aspx" method="post">
-     <div class="modal-dialog" role="document" style="width:400px">
-       <div class="modal-content">
-         <div class="modal-header text-center">
-           <h4 class="modal-title w-100 font-weight-bold" style="color:#060">
-             Panel de Acceso <br />SISTEMA DE SERVICIOS EN LÍNEA
-           </h4>
-         </div>
-         <div class="modal-body">
-           <div>
-             <label id="icon" for="recinto">
-               <i class="fa fa-institution fa-2x" aria-hidden="true" style="color:#060"></i>
-             </label>
-             <select id="Erecinto" name="Erecinto"class="form-control validate" style="font-family:Arial, FontAwesome; font-size:16px; width:89%;float:right; margin-top:-5px" required="">
-               <option value="" selected="" data-default="" >Recinto de UTESA</option>
-               <option value="UTDJB">Dajabón</option>
-               <option value="UTGHD">Gaspar Hernández</option>
-               <option value="UTMAO">Mao</option>
-               <option value="UTMOC">Moca</option>
-               <option value="UTPPT">Puerto Plata</option>
-               <option value="UTSAN">Santiago - Sede</option>
-               <option value="UTGRS">Santiago - Escuela de Graduados</option>
-               <option value="UTSDG">Santo Domingo</option>
-               <option value="UTSDO">Santo Domingo Oriental</option>
-               <option value="UTSDG">Santo Domingo - Escuela de Graduados</option>
-             </select>
-           </div>
-           <br />
-           <div>
-             <label id="icon" for="email">
-               <i class="fa fa-user fa-2x" aria-hidden="true" style="color:#060"></i>
-             </label>
-             <input type="text" name="Ematri" id="Ematri" class="form-control validate" placeholder="Matrícula estudiante" style="font-family:Arial, FontAwesome; font-size:16px; width:89%;float:right; margin-top:-5px" required="">
-                </div>
-           <br />
-           <div>
-             <label id="icon" for="password">
-               <i class="fa fa-key fa-2x" aria-hidden="true" style="color:#060"></i>
-             </label>
-             <input type="password" name="Ec" id="Ec" class="form-control validate" placeholder="Contraseña estudiante" style="font-family:Arial, FontAwesome; font-size:16px; width:89%;float:right; margin-top:-5px" required="">
-                </div>
-         </div>
-         <div class="modal-footer d-flex justify-content-center">
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-           <button type="submit" id="submit" class="btn btn-success" data-dismiss="modal" onclick="eEnviar()">Entrar</button>
-           <hr />
-           <div class="alert alert-success" role="alert" align="center">
-             
-           </div>
-         </div>
-       </div>
-     </div>
-   </form>
+   <hr>
+   <br>
+  </hr>
+
+   <div>
+   <select id="Erecinto" name="Erecinto"class="form-control validate" style="font-family:Arial, FontAwesome; font-size:16px; width:89%;float:right; margin-top:-5px" required="">
+   <option value="" selected="" data-default="" >Recinto de UTESA</option>
+   <option value="UTDJB">Dajabón</option>
+   <option value="UTGHD">Gaspar Hernández</option>
+   <option value="UTMAO">Mao</option>
+  <option value="UTMOC">Moca</option>
+  <option value="UTPPT">Puerto Plata</option>
+  <option value="UTSAN">Santiago - Sede</option>
+  <option value="UTGRS">Santiago - Escuela de Graduados</option>
+  <option value="UTSDG">Santo Domingo</option>
+  <option value="UTSDO">Santo Domingo Oriental</option>
+  <option value="UTSDG">Santo Domingo - Escuela de Graduados</option>
+  </select>
+  </div> 
+ 
+ <div>
+<input type="text" name="Ematri" id="Ematri" class="form-control" placeholder="Matrícula estudiante" style="font-family:Arial, FontAwesome; font-size:16px; width:89%;float:right; margin-top:-5px" required="">
+</div>
+ 
+<div>
+<input type="password" name="Ec" id="Ec" class="form-control" placeholder="Contraseña estudiante" style="font-family:Arial, FontAwesome; font-size:16px; width:89%;float:right; margin-top:-5px" required="">
+</div>
+ 
+</div>
 </body>
-
 </html>
