@@ -92,6 +92,8 @@ function checkInputs() {
 
   if (matriculaValue === '') {
     setErrorFor(matricula)
+  } else if(validarMatricula(matriculaValue == false)){
+    setErrorFor(matricula)
   } else {
     setSuccessFor(matricula)
   }
@@ -140,6 +142,16 @@ function isEmail(email) {
     email
   )
 }
+
+function validarMatricula(parametro){
+  var patron =  /^\d{1}-\d{2}-\d{4}$/;
+  if (!patron.test(parametro)){
+    return false;
+  }else{
+    return true;
+  }
+}
+
 
 /*
  * Modal
