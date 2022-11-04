@@ -10,9 +10,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+<script>
+
+/*
+* Validacion de entrada
+*/
+function soloLetras(e) {
+  var key = e.keyCode || e.which,
+    tecla = String.fromCharCode(key).toLowerCase(),
+    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz",
+    especiales = [8, 37, 39],
+    tecla_especial = false;
+
+  for (var i in especiales) {
+    if (key == especiales[i]) {
+      tecla_especial = true;
+      break;
+    }
+  }
+
+  if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+    return false;
+  }
+}
+
+</script>
 <body>
   <dialog class="modal" id="modal">
-    <form class="modal-content" method="dialog">
+    <form class="modal-content" method="dialog" id="validationForm" name="formvalidated">
       <h3 class="modal-title">Audiovisuales y Multimedia</h3>
       <p>
         Este formulario se completa aproximadamente en 7 minutos. Uso interno
@@ -100,7 +125,10 @@
 
       <div class="form-control">
         <label for="asignatura">Asignatura</label>
-        <input type="text" name="asignatura" placeholder="Inserte asignatura..." id="asignatura" required />
+        <input type="text" name="letras" placeholder="Inserte asignatura..." id="letras"  onkeypress="return soloLetras(event)"/>
+        <div id="message" style="position: absolute; left: 10px; top: 50px; background-color: Yellow; z-index: 10" hidden>
+          Introduzca solo letras (A-Z) o (a-z). Máximo 35 caracteres.
+        </div>
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -118,7 +146,7 @@
 
       <div class="form-control">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombreEstudiante" id="nombre_est" placeholder="Nombre del estudiante..." required />
+        <input type="text" name="nombreEstudiante" id="nombre_est" placeholder="Nombre del estudiante..." required onkeypress="return soloLetras(event)"/>
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -152,7 +180,7 @@
 
       <div class="form-control">
         <label for="nombre_doc">Nombre del docente</label>
-        <input type="text" name="nombreDocente" id="nombre_doc" placeholder="Nombre del docente..." required />
+        <input type="text" name="nombreDocente" id="nombre_doc" placeholder="Nombre del docente..." required onkeypress="return soloLetras(event)"/>
         <i class="fas fa-check-circle"></i>
         <i class="fas fa-exclamation-circle"></i>
         <small>Error message</small>
@@ -170,7 +198,6 @@
     </form>
   </main>
 
-  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

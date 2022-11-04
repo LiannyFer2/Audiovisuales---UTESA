@@ -1,4 +1,4 @@
-/*
+V/*
  * Form Validation
  */
 
@@ -140,6 +140,7 @@ function isEmail(email) {
     email
   )
 }
+
 
 /*
  * Modal
