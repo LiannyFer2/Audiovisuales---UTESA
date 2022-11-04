@@ -120,3 +120,8 @@ h2 {
 .table {
     margin-top: 50px;
 }
+
+table thead {
+      background:#155034d0;
+      color:white;
+  }

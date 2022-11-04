@@ -1,0 +1,128 @@
+/* Basic reset */
+
+* {
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    background-color: #f7fdf3;
+    }
+    
+    .sesion {
+        height: 62px;
+        width: 100%;
+        position: fixed;
+        background: rgba(0, 51, 0, 0.818);;
+    }
+    
+    .sesion h2 {
+        margin-top: 9px;
+        margin-left: 40px;
+    }
+    
+    .container {
+        margin-top: 62px;
+        width: 100%;
+    }
+    
+    .menu {
+        height: 100%;
+        margin-left: -120px;
+        width: 145px;
+        float: left;
+        position: fixed;   
+        background: #155034d0;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    
+    .fa-light {
+        width: 200px;
+        height: 200px;
+    }
+    
+    h2 {
+        color: #fff;
+        margin-top: 27px;
+        margin-left: 25px;
+        float: left;
+    }
+    
+    .cerrar_ses {
+        color: #fff;
+        float: right;
+        display: flex;
+        margin-top: 20px;
+        text-decoration: none;
+        margin-right: 25px;
+        text-transform: uppercase;
+    }
+    
+    .opcion_menu { 
+        height: 50px;
+        width: 50px;
+        color: #12170cdb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        text-decoration: none;
+        padding: 3rem;
+        transition: 300ms background-color ease-in-out, 300ms color ease, 300ms border-radius ease;
+    }
+    
+    .opcion_menu:hover {
+        background-color: #0d5634ac;
+        color: white;
+        border-radius: 8px;
+    }
+    
+    .__icono {
+        margin-top: -25px;
+        font-size: 2rem;
+    }
+    
+    .menu_texto {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+    
+    .ticket {
+        height: 100%;
+        float: left;
+        position: fixed;
+        margin-left: 25px;
+        width: 90.5%;
+        padding: 5rem 5rem 7rem 4rem;
+    
+    }
+    
+    .ticket h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-right: 155px;
+        margin-top: 1   0px;
+    }
+    
+    .btn-group {
+        margin-top: 60px;
+        margin-left: 32%;
+    }
+    
+    .table {
+        margin-top: 50px;
+    }
+    
+    table thead {
+          background:#155034d0;
+          color:white;
+      }
+    
