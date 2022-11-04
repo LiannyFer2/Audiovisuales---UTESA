@@ -92,7 +92,7 @@ function checkInputs() {
 
   if (matriculaValue === '') {
     setErrorFor(matricula)
-  } else if(validarMatricula(matriculaValue == false)){
+  } else if(!validarMatricula(matriculaValue)) {
     setErrorFor(matricula)
   } else {
     setSuccessFor(matricula)
@@ -143,13 +143,10 @@ function isEmail(email) {
   )
 }
 
-function validarMatricula(parametro){
-  var patron =  /^\d{1}-\d{2}-\d{4}$/;
-  if (!patron.test(parametro)){
-    return false;
-  }else{
-    return true;
-  }
+function validarMatricula(matricula){
+  return /^\d{1}-\d{2}-\d{4}$/.test(
+    matricula
+  )
 }
 
 
