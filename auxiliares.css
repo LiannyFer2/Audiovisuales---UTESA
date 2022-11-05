@@ -144,9 +144,7 @@
 --dt-padding-xs: 2px;
 }
 
-.material-icons{
-    font-size: 16px;
-}
+
 
 .datatable-container{
 font-family: 'Nono Sans', sans-serif;
@@ -156,7 +154,7 @@ width: 600px;
 height: 50%;
 padding: 50px;
 margin-top: 50px;
-margin-left: 100px;
+margin-left: 344px;
 font-size: 12px;
 border-radius: 5px;
 }
