@@ -138,13 +138,6 @@
 @import url('https://fonts.gogleapis.com/css2?family=Noto+Sans&display=swap');
 
 :root{
---primary-color: white;
---secondary-color: red;
---highlight-color:blue;
-
---dt--status-available-color: rgb(32, 0, 128);
---dt-status-away-color: pink;
---dt-status-offilne-color: orange;
 
 --dt-padding: 100px;
 --dt-padding-s: 60px;
@@ -205,6 +198,7 @@ display: block;
     display: inline-block;
     margin: 0 var(--dt-padding-xs);
     align-items: baseline;
+  
  }
 
  .datatable-container .header-tools .tools ul li button:hover{
@@ -219,7 +213,10 @@ display: block;
     width: 100%;
 }
 
-.datatable-container .datatable tbody tr .available:: ::after{
+/*.datatable-container .datatable tbody tr .available::after{
     content: 'Disponible';
-    color: greenyellow;
-}
+    color: white;
+}*/
+
+
+
