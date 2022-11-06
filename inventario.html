@@ -5,7 +5,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <meta charset="UTF-8" />
     <script src="https://kit.fontawesome.com/4246907a70.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="principal2_style.css" />
+    <link rel="stylesheet" href="inventario.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,21 +60,20 @@
 
         <section class="ticket">
             <h1><center> Inventario </center></h1>
-            
-            <div class="btn-group " role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">Todos</label>
-                
-                <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-warning" for="btnradio1">Por vencer</label>
+            <br>
+            <div class="input-group mb-3">
+              <select class="custom-select" id="inputGroupSelect02" style="height: 30px; margin-left: 250px">
+                <option selected>Filtros</option>
+                <option value="1">Proyector</option>
+                <option value="2">Laptop</option>
+                <option value="3">Sonido</option>
+              </select>
               
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio2">A tiempo</label>
-              
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-danger" for="btnradio3">Canceladas</label>
-              </div>
 
+              <button type="button" style="margin-left: 885px; margin-top: -20px;" class="btn agregar btn-primary btn-sm">Agregar Equipo</button>
+            </div>
+
+              
             
             <div class="tabla">
                 <div class="row">
@@ -82,64 +81,84 @@
                     <table class="tftable" border="1">
                         <thead>
                         <tr>
-                            <th style="width: 80px;""></th>
-                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Equipo</th>
-                            <th style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En función</th>
-                            <th>&nbsp;&nbsp;&nbsp;&nbsp;Stock</th>
-                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reparación</th>
-                            <th></th>
+                            <th>ID</th>
+                            <th>Equipo</th>
+                            <th>En función</th>
+                            <th>Stock</th>
+                            <th>Reparación</th>
                         </tr>
                     </thead>
                         <tr>
                             <td>1</td >
-                            <td>10-10-2022</td>
-                            <td>B402</td>
-                            <td>Lianny Fernandez</td>
-                            <td>Estudiante</td>
+                            <td>Proyector</td>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>1</td>
                             
                         </tr>
                         <tr>
                           <td>1</td >
-                          <td>10-10-2022</td>
-                          <td>B402</td>
-                          <td>Lianny Fernandez</td>
-                          <td>Estudiante</td>
+                          <td>Proyector</td>
+                          <td>20</td>
+                          <td>40</td>
+                          <td>1</td>
                           
                       </tr>
                       <tr>
                         <td>1</td >
-                        <td>10-10-2022</td>
-                        <td>B402</td>
-                        <td>Lianny Fernandez</td>
-                        <td>Estudiante</td>
+                        <td>Proyector</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>1</td>
                         
                     </tr>
                     <tr>
                       <td>1</td >
-                      <td>10-10-2022</td>
-                      <td>B402</td>
-                      <td>Lianny Fernandez</td>
-                      <td>Estudiante</td>
+                      <td>Proyector</td>
+                      <td>20</td>
+                      <td>40</td>
+                      <td>1</td>
                       
                   </tr>
                   <tr>
                     <td>1</td >
-                    <td>10-10-2022</td>
-                    <td>B402</td>
-                    <td>Lianny Fernandez</td>
-                    <td>Estudiante</td>
+                    <td>Proyector</td>
+                    <td>20</td>
+                    <td>40</td>
+                    <td>1</td>
                     
                 </tr>
                 <tr>
                   <td>1</td >
-                  <td>10-10-2022</td>
-                  <td>B402</td>
-                  <td>Lianny Fernandez</td>
-                  <td>Estudiante</td>
+                  <td>Proyector</td>
+                  <td>20</td>
+                  <td>40</td>
+                  <td>1</td>
                   
               </tr>
-                        
-
+              <tr>
+                <td>1</td >
+                <td>Proyector</td>
+                <td>20</td>
+                <td>40</td>
+                <td>1</td>
+                
+            </tr><tr>
+              <td>1</td >
+              <td>Proyector</td>
+              <td>20</td>
+              <td>40</td>
+              <td>1</td>
+              
+          </tr>
+          <tr>
+            <td>1</td >
+            <td>Proyector</td>
+            <td>20</td>
+            <td>40</td>
+            <td>1</td>
+            
+        </tr>
                         
                     </table>
                     
