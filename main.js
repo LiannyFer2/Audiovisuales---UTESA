@@ -84,6 +84,10 @@ function checkInputs() {
     setSuccessFor(aula)
   }
 
+  //estudiante
+  
+
+
   if (nombre_estValue === '') {
     setErrorFor(nombre_est)
   } else {
