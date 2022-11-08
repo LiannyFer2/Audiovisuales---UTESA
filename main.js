@@ -20,7 +20,120 @@ const telefono = document.getElementById('telefono')
 //datos del docente
 const nombre_doc = document.getElementById('nombre_doc')
 const codigo_doc = document.getElementById('codigo_doc')
+//
+// auxiliares
+const dataTable = document.getElementById('data')
+const searchInput = document.getElementById('search')
 
+const objetoFiltrado = [];
+const objetoPrueba = [
+  {
+    id: 'B409',
+    nombre: 'Lianny',
+    activo: false,
+  },
+  {
+    id: 'B409',
+    nombre: 'Elias',
+    activo: false,
+  },
+  {
+    id: 'B409',
+    nombre: 'Mercy',
+    activo: false,
+  },
+
+  {
+    id: 'B409',
+    nombre: 'Randall',
+    activo: false,
+  },
+
+  {
+    id: 'B409',
+    nombre: 'Darwin',
+    activo: false,
+  },
+
+  {
+    id: 'B409',
+    nombre: 'Giselle',
+    activo: false,
+  },
+
+  {
+    id: 'B409',
+    nombre: 'Jose',
+    activo: false,
+  },
+]
+
+function printDatos(objeto = objetoPrueba) {
+  objeto.map((element, index) => {
+    let { nombre, id, activo } = element;
+
+    // tag
+    let
+      containerTag = document.createElement('tr'),
+      nombreTag = document.createElement('td'),
+      idTag = document.createElement('td'),
+      activoTag = document.createElement('input'),
+      labelTag = document.createElement('label'),
+      spanTag = document.createElement('span');
+
+    // atributes
+    let checktype = document.createAttribute('type');
+
+    // values
+    nombreTag.textContent = nombre;
+    idTag.textContent = id;
+    checktype.value = 'checkbox';
+    spanTag.textContent = !activo ? 'Disponible' : 'Ocupado';
+
+
+    // set attributes
+    activoTag.setAttributeNode(checktype);
+
+
+    // introduction
+    labelTag.appendChild(activoTag);
+    labelTag.appendChild(spanTag);
+    containerTag.appendChild(labelTag);
+    containerTag.appendChild(idTag);
+    containerTag.appendChild(nombreTag);
+
+
+    // print
+    dataTable.appendChild(containerTag);
+
+    // condition
+    activoTag.addEventListener('change', () => {
+
+      if (activoTag.checked !== true) {
+        spanTag.innerHTML = 'Disponible'
+        objetoPrueba[index].activo = false
+      } else {
+        spanTag.innerHTML = 'Ocupado'
+        objetoPrueba[index].activo = true
+      }
+
+    })
+
+  })
+}
+printDatos()
+
+searchInput.addEventListener('keyup', (e) => {
+  dataTable.innerHTML = ''
+  let value = e.target.value;
+  let busqueda = objetoPrueba.filter(el => el.nombre.indexOf(value) !== -1)
+  objetoFiltrado.push(busqueda)
+
+  printDatos(objetoFiltrado[objetoFiltrado.length - 1])
+})
+
+
+//
 const formIsValid = {
   equipo: false,
 }
