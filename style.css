@@ -15,6 +15,8 @@ body {
 
 /* Utils */
 
+
+
 .container {
   background-color: #fff;
   border-radius: 5px;
@@ -47,12 +49,14 @@ body {
   flex-direction: column;
   gap: 0.25rem;
   margin-bottom: 1rem;
+  
 }
 
 /* Info  */
 
 .info {
   color: #fff;
+  
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
@@ -112,9 +116,10 @@ body {
 .form-control label {
   display: inline-block;
   margin-bottom: 5px;
+  
 }
 
-.form-control input {
+.form-control input, select {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
   display: block;
