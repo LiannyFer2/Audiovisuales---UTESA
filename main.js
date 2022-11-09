@@ -1,4 +1,4 @@
-V/*
+/*
  * Form Validation
  */
 
@@ -40,6 +40,62 @@ form.addEventListener('submit', (e) => {
   checkInputs()
 })
 
+
+
+function pruebaExpresiones(expresion, input) {
+  input.addEventListener('keyup', () => {
+    if (expresion.test(input.value.trim())) console.log('funciona')
+    else console.log('error');
+  })
+}
+
+pruebaExpresiones(
+  /^\D*\d{7}$/,
+  matricula
+)
+
+
+const checkInputArray = [
+  {
+    expresion: /^\D*\d{3}$/,
+    input: asignatura
+  },
+  {
+    expresion: /[a-cA-C ]{3}[0-9]{3}/,
+    input: aula
+  },
+  {
+    expresion: /[a-zA-Z ]/,
+    input: nombre_est
+  },
+  {
+    expresion: /^\D*\d{7}$/,
+    input: matricula
+  },
+  {
+    expresion: /[a-zA-Z ]/,
+    input: nombre_doc
+  },
+  {
+    expresion: /[a-zA-Z ]{3}[0-9]{3}/,
+    input: codigo_doc
+  },
+
+]
+checkInputArray.map((elemento) => {
+  let {expresion, input} = elemento;
+
+  function validation(expresion, retornar) {
+    if (expresion.test(retornar)) setSuccessFor(retornar)
+    else setErrorFor(retornar)
+  }
+
+
+  input.addEventListener('keyup', () => {
+ toString() })
+  
+})
+
 function checkInputs() {
   // remover espacios en blancos
   const fechaValue = fecha.value.trim()
@@ -54,77 +110,47 @@ function checkInputs() {
   const nombre_docValue = nombre_doc.value.trim()
   const codigo_docValue = codigo_doc.value.trim()
 
-  if (fechaValue === '') {
-    setErrorFor(fecha)
-  } else {
-    setSuccessFor(fecha)
+  function validation(expresion, value, retornar) {
+    if (expresion.test(value)) setSuccessFor(retornar)
+    else setErrorFor(retornar)
   }
 
-  if (hora_inicioValue === '') {
-    setErrorFor(hora_inicio)
-  } else {
-    setSuccessFor(hora_inicio)
-  }
+  validation(
+    /[a-zA-Z ]/,
+    asignaturaValue,
+    asignatura,
+  )
 
-  if (hora_finValue === '') {
-    setErrorFor(hora_fin)
-  } else {
-    setSuccessFor(hora_fin)
-  }
+  validation(
+    /[a-cA-C ]{3}[0-9]{3}/,
+    aulaValue,
+    aula,
+  )
 
-  if (asignaturaValue === '') {
-    setErrorFor(asignatura)
-  } else {
-    setSuccessFor(asignatura)
-  }
+  validation(
+    /[a-zA-Z ]/,
+    nombre_estValue,
+    nombre_est,
+  )
 
-  if (aulaValue === '') {
-    setErrorFor(aula)
-  } else {
-    setSuccessFor(aula)
-  }
+  validation(
+    /^\D*\d{7}$/,
+    matriculaValue,
+    matricula
+  )
 
-  //estudiante
-  
+  validation(
+    /[a-zA-Z ]/,
+    nombre_docValue,
+    nombre_doc,
+  )
 
+  validation(
+    /[a-zA-Z ]{3}[0-9]{3}/,
+    codigo_docValue,
+    codigo_doc,
+  )
 
-  if (nombre_estValue === '') {
-    setErrorFor(nombre_est)
-  } else {
-    setSuccessFor(nombre_est)
-  }
-
-  if (matriculaValue === '') {
-    setErrorFor(matricula)
-  } else {
-    setSuccessFor(matricula)
-  }
-
-  if (emailValue === '') {
-    setErrorFor(email)
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email)
-  } else {
-    setSuccessFor(email)
-  }
-
-  if (telefonoValue === '') {
-    setErrorFor(telefono)
-  } else {
-    setSuccessFor(telefono)
-  }
-
-  if (nombre_docValue === '') {
-    setErrorFor(nombre_doc)
-  } else {
-    setSuccessFor(nombre_doc)
-  }
-
-  if (codigo_docValue === '') {
-    setErrorFor(codigo_doc)
-  } else {
-    setSuccessFor(codigo_doc)
-  }
 }
 
 function setErrorFor(input, message) {
