@@ -178,3 +178,11 @@ body {
   margin-top: 20px;
   width: 100%;
 }
+
+.errorbutton{
+  background: gray;
+}
+
+.successButton {
+  background-color: #006600;
+}
