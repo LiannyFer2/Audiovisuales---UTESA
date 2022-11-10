@@ -21,6 +21,9 @@ const telefono = document.getElementById('telefono')
 const nombre_doc = document.getElementById('nombre_doc')
 const codigo_doc = document.getElementById('codigo_doc')
 
+//button submit
+const buttonSubmit = document.getElementById('buttonSubmit')
+
 const formIsValid = {
   equipo: false,
 }
@@ -31,6 +34,7 @@ equipo.addEventListener('change', (e) => {
 })
 
 form.addEventListener('submit', (e) => {
+
   e.preventDefault()
 
   const data = new FormData(form)
@@ -41,31 +45,21 @@ form.addEventListener('submit', (e) => {
 })
 
 
-
-function pruebaExpresiones(expresion, input) {
-  input.addEventListener('keyup', () => {
-    if (expresion.test(input.value.trim())) console.log('funciona')
-    else console.log('error');
-  })
-}
-
-pruebaExpresiones(
-  /^\D*\d{7}$/,
-  matricula
-)
-
-
 const checkInputArray = [
   {
-    expresion: /^\D*\d{3}$/,
+    expresion: /^\D*\d{10}$/,
+    input: telefono
+  },
+  {
+    expresion: /^[a-zA-Z]{2,254}$/,
     input: asignatura
   },
   {
-    expresion: /[a-cA-C ]{3}[0-9]{3}/,
+    expresion: /^[a-cA-C]{1}[0-9]{3}$/,
     input: aula
   },
   {
-    expresion: /[a-zA-Z ]/,
+    expresion: /^[a-zA-Z]{2,254}$/,
     input: nombre_est
   },
   {
@@ -73,27 +67,31 @@ const checkInputArray = [
     input: matricula
   },
   {
-    expresion: /[a-zA-Z ]/,
+    expresion: /^[a-zA-Z]{2,254}$/,
     input: nombre_doc
   },
   {
-    expresion: /[a-zA-Z ]{3}[0-9]{3}/,
+    expresion: /^[a-zA-Z]{3}[0-9]{3}$/,
     input: codigo_doc
   },
 
 ]
+
 checkInputArray.map((elemento) => {
-  let {expresion, input} = elemento;
+  let { expresion, input } = elemento;
+
+  console.log("🚀 ~ file: main.js ~ line 84 ~ checkInputArray.map ~ buttonSubmit", buttonSubmit)
 
   function validation(expresion, retornar) {
-    if (expresion.test(retornar)) setSuccessFor(retornar)
+    if (expresion.test(retornar.value.trim())) setSuccessFor(retornar)
     else setErrorFor(retornar)
   }
 
 
   input.addEventListener('keyup', () => {
- toString() })
-  
+    validation(expresion, input)
+  })
+
 })
 
 function checkInputs() {
@@ -122,7 +120,7 @@ function checkInputs() {
   )
 
   validation(
-    /[a-cA-C ]{3}[0-9]{3}/,
+    /[a-cA-C ]{1}[0-9]{3}/,
     aulaValue,
     aula,
   )
@@ -151,6 +149,13 @@ function checkInputs() {
     codigo_doc,
   )
 
+
+  validation(
+    /^\D*\d{10}$/,
+    telefonoValue,
+    telefono,
+  )
+
 }
 
 function setErrorFor(input, message) {
@@ -158,11 +163,18 @@ function setErrorFor(input, message) {
   const small = formControl.querySelector('small')
   formControl.className = 'form-control error'
   small.innerText = message
+
+  const disable = document.createAttribute('disabled')
+  buttonSubmit.setAttributeNode(disable)
+  buttonSubmit.className = 'errorbutton'
+  
 }
 
 function setSuccessFor(input) {
   const formControl = input.parentElement
   formControl.className = 'form-control success'
+  buttonSubmit.removeAttribute('disabled')
+  buttonSubmit.className = 'successButton'
 }
 
 function isEmail(email) {
