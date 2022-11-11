@@ -20,120 +20,105 @@ const telefono = document.getElementById('telefono')
 //datos del docente
 const nombre_doc = document.getElementById('nombre_doc')
 const codigo_doc = document.getElementById('codigo_doc')
-//
-// auxiliares
+
 const dataTable = document.getElementById('data')
 const searchInput = document.getElementById('search')
 
-const objetoFiltrado = [];
-const objetoPrueba = [
-  {
-    id: 'B409',
-    nombre: 'Lianny',
-    activo: false,
-  },
-  {
-    id: 'B409',
-    nombre: 'Elias',
-    activo: false,
-  },
-  {
-    id: 'B409',
-    nombre: 'Mercy',
-    activo: false,
-  },
+const server = 'http://localhost:8080/api'
 
-  {
-    id: 'B409',
-    nombre: 'Randall',
-    activo: false,
-  },
+fetch(`${server}/assistants`)
+  .then(res => res.json())
+  .then(res => {
+    const objetoFiltrado = [];
+    const objetoPrueba = [];
 
-  {
-    id: 'B409',
-    nombre: 'Darwin',
-    activo: false,
-  },
+    objetoPrueba.push(...res.assistant)
 
-  {
-    id: 'B409',
-    nombre: 'Giselle',
-    activo: false,
-  },
+    function printDatos(objeto = objetoPrueba) {
+      console.log("objetoPrueba", objetoPrueba)
+      objeto.map((element, index) => {
+        let { nombre, _id, estado, idAuxiliar } = element;
 
-  {
-    id: 'B409',
-    nombre: 'Jose',
-    activo: false,
-  },
-]
+        // tag
+        let
+          containerTag = document.createElement('tr'),
+          nombreTag = document.createElement('td'),
+          idTag = document.createElement('td'),
+          activoTag = document.createElement('input'),
+          labelTag = document.createElement('label'),
+          spanTag = document.createElement('span');
 
-function printDatos(objeto = objetoPrueba) {
-  objeto.map((element, index) => {
-    let { nombre, id, activo } = element;
+        // atributes
+        let checktype = document.createAttribute('type');
+        let checked = document.createAttribute('checked');
 
-    // tag
-    let
-      containerTag = document.createElement('tr'),
-      nombreTag = document.createElement('td'),
-      idTag = document.createElement('td'),
-      activoTag = document.createElement('input'),
-      labelTag = document.createElement('label'),
-      spanTag = document.createElement('span');
-
-    // atributes
-    let checktype = document.createAttribute('type');
-
-    // values
-    nombreTag.textContent = nombre;
-    idTag.textContent = id;
-    checktype.value = 'checkbox';
-    spanTag.textContent = !activo ? 'Disponible' : 'Ocupado';
+        // values
+        nombreTag.textContent = nombre;
+        idTag.textContent = idAuxiliar;
+        checktype.value = 'checkbox';
+        spanTag.textContent = !estado ? 'Disponible' : 'Ocupado';
 
 
-    // set attributes
-    activoTag.setAttributeNode(checktype);
+        // set attributes
+        activoTag.setAttributeNode(checktype);
+        if (estado) activoTag.setAttributeNode(checked)
 
 
-    // introduction
-    labelTag.appendChild(activoTag);
-    labelTag.appendChild(spanTag);
-    containerTag.appendChild(labelTag);
-    containerTag.appendChild(idTag);
-    containerTag.appendChild(nombreTag);
+
+        // introduction
+        labelTag.appendChild(activoTag);
+        labelTag.appendChild(spanTag);
+        containerTag.appendChild(labelTag);
+        containerTag.appendChild(idTag);
+        containerTag.appendChild(nombreTag);
 
 
-    // print
-    dataTable.appendChild(containerTag);
+        // print
+        dataTable.appendChild(containerTag);
 
-    // condition
-    activoTag.addEventListener('change', () => {
+        // condition
+        activoTag.addEventListener('change', () => {
+          const editStatus = (data) => {
+            fetch(`${server}/assistants/${_id}`, {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+              .then(res => console.log(res))
+              .catch(err => console.error(err))
+          }
 
-      if (activoTag.checked !== true) {
-        spanTag.innerHTML = 'Disponible'
-        objetoPrueba[index].activo = false
-      } else {
-        spanTag.innerHTML = 'Ocupado'
-        objetoPrueba[index].activo = true
-      }
+          if (activoTag.checked !== true) {
+            spanTag.innerHTML = 'Disponible'
+            objetoPrueba[index].estado = false
+            editStatus(objetoPrueba[index])
+            console.log(objetoPrueba[index])
+          } else {
+            spanTag.innerHTML = 'Ocupado'
+            objetoPrueba[index].estado = true
+            editStatus(objetoPrueba[index])
+            console.log(objetoPrueba[index])
+          }
 
+        })
+
+      })
+    }
+    printDatos()
+
+    searchInput.addEventListener('keyup', (e) => {
+      dataTable.innerHTML = ''
+      let value = e.target.value;
+      let busqueda = objetoPrueba.filter(el => el.nombre.toLocaleLowerCase().indexOf(value) !== -1 || el.nombre.indexOf(value) !== -1)
+      objetoFiltrado.push(busqueda)
+
+      printDatos(objetoFiltrado[objetoFiltrado.length - 1])
     })
-
   })
-}
-printDatos()
-
-searchInput.addEventListener('keyup', (e) => {
-  dataTable.innerHTML = ''
-  let value = e.target.value;
-  let busqueda = objetoPrueba.filter(el => el.nombre.indexOf(value) !== -1)
-  objetoFiltrado.push(busqueda)
-
-  printDatos(objetoFiltrado[objetoFiltrado.length - 1])
-})
 
 
-//
 const formIsValid = {
   equipo: false,
 }
@@ -148,10 +133,90 @@ form.addEventListener('submit', (e) => {
 
   const data = new FormData(form)
 
-  console.log(data)
-
   checkInputs()
+
+  const arreglo = [
+    data.get("cLaptop") ? "laptop" : "",
+    data.get("cProyector") ? "proyector" : "",
+    data.get("cSonido") ? "sonido" : "",
+  ].filter(item => item !== "")
+
+  const payload = {
+    fechaDeUso: data.get("fechaDeUso"),
+    horaInicio: data.get("horaInicio"),
+    horaFinal: data.get("horaFinal"),
+    asignatura: data.get("asignatura"),
+    curso: data.get("curso"),
+    telefono: data.get("telefonoEstudiante"),
+    codigoDocente: data.get("codigoDocente"),
+    matriculaEstudiante: data.get("matricula"),
+    equipos: arreglo
+  }
+  console.log("payload", payload)
+
+  console.log(JSON.stringify(payload))
+
+  fetch(`${server}/form`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(res => console.log(res))
+    .catch(err => console.error(err))
 })
+
+
+
+// function pruebaExpresiones(expresion, input) {
+//   input.addEventListener('keyup', () => {
+//     if (expresion.test(input.value.trim())) console.log('funciona')
+//     else console.log('error');
+//   })
+// }
+
+// const checkInputArray = [
+//   {
+//     expresion: /^\D*\d{3}$/,
+//     input: asignatura
+//   },
+//   {
+//     expresion: /[a-cA-C ]{3}[0-9]{3}/,
+//     input: aula
+//   },
+//   {
+//     expresion: /[a-zA-Z ]/,
+//     input: nombre_est
+//   },
+//   {
+//     expresion: /^\D*\d{7}$/,
+//     input: matricula
+//   },
+//   {
+//     expresion: /[a-zA-Z ]/,
+//     input: nombre_doc
+//   },
+//   {
+//     expresion: /[a-zA-Z ]{3}[0-9]{3}/,
+//     input: codigo_doc
+//   },
+
+// ]
+// checkInputArray.map((elemento) => {
+//   let { expresion, input } = elemento;
+
+//   function validation(expresion, retornar) {
+//     if (expresion.test(retornar)) setSuccessFor(retornar)
+//     else setErrorFor(retornar)
+//   }
+
+
+//   input.addEventListener('keyup', () => {
+//     toString()
+//   })
+
+// })
 
 function checkInputs() {
   // remover espacios en blancos
@@ -167,73 +232,59 @@ function checkInputs() {
   const nombre_docValue = nombre_doc.value.trim()
   const codigo_docValue = codigo_doc.value.trim()
 
-  if (fechaValue === '') {
-    setErrorFor(fecha)
-  } else {
-    setSuccessFor(fecha)
+  function validation(expresion, value, retornar) {
+    if (expresion.test(value)) setSuccessFor(retornar)
+    else setErrorFor(retornar)
   }
 
-  if (hora_inicioValue === '') {
-    setErrorFor(hora_inicio)
-  } else {
-    setSuccessFor(hora_inicio)
-  }
+  validation(
+    /[a-zA-Z ]/,
+    asignaturaValue,
+    asignatura,
+  )
 
-  if (hora_finValue === '') {
-    setErrorFor(hora_fin)
-  } else {
-    setSuccessFor(hora_fin)
-  }
+  validation(
+    /[a-cA-C ]{3}[0-9]{3}/,
+    aulaValue,
+    aula,
+  )
 
-  if (asignaturaValue === '') {
-    setErrorFor(asignatura)
-  } else {
-    setSuccessFor(asignatura)
-  }
+  validation(
+    /[a-zA-Z ]/,
+    nombre_estValue,
+    nombre_est,
+  )
 
-  if (aulaValue === '') {
-    setErrorFor(aula)
-  } else {
-    setSuccessFor(aula)
-  }
+  validation(
+    /^\D*\d{7}$/,
+    matriculaValue,
+    matricula
+  )
 
-  if (nombre_estValue === '') {
-    setErrorFor(nombre_est)
-  } else {
-    setSuccessFor(nombre_est)
-  }
+  validation(
+    /[a-zA-Z ]/,
+    nombre_docValue,
+    nombre_doc,
+  )
 
-  if (matriculaValue === '') {
-    setErrorFor(matricula)
-  } else {
-    setSuccessFor(matricula)
-  }
+  validation(
+    /[a-zA-Z ]{3}[0-9]{3}/,
+    codigo_docValue,
+    codigo_doc,
+  )
 
-  if (emailValue === '') {
-    setErrorFor(email)
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email)
-  } else {
-    setSuccessFor(email)
-  }
+  validation(
+    /^\D*\d{10}$/,
+    telefonoValue,
+    telefono,
+  )
 
-  if (telefonoValue === '') {
-    setErrorFor(telefono)
-  } else {
-    setSuccessFor(telefono)
-  }
+  validation(
+    /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
+    emailValue,
+    email,
+  )
 
-  if (nombre_docValue === '') {
-    setErrorFor(nombre_doc)
-  } else {
-    setSuccessFor(nombre_doc)
-  }
-
-  if (codigo_docValue === '') {
-    setErrorFor(codigo_doc)
-  } else {
-    setSuccessFor(codigo_doc)
-  }
 }
 
 function setErrorFor(input, message) {
@@ -253,6 +304,7 @@ function isEmail(email) {
     email
   )
 }
+
 
 /*
  * Modal
