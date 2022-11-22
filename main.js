@@ -499,7 +499,7 @@ function checkInputs() {
 
   validation(/[a-zA-Z ]/, nombre_docValue, nombre_doc);
 
-  validation(/^\D*\d{7}$/, codigo_docValue, codigo_doc);
+  validation(/[a-zA-Z ]{3}[0-9]{3}/, codigo_docValue, codigo_doc);
 
   validation(/^\D*\d{10}$/, telefonoValue, telefono);
 
