@@ -80,7 +80,26 @@
       300ms border-radius ease;
   }
   
+   .opcion_menuu {
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+    color: #12170cdb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 3rem;
+    transition: 300ms background-color ease-in-out, 300ms color ease,
+      300ms border-radius ease;
+  }
   .opcion_menu:hover {
+    background-color: #0d5634ac;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .opcion_menuu:hover {
     background-color: #0d5634ac;
     color: white;
     border-radius: 8px;
@@ -91,6 +110,11 @@
     font-size: 2rem;
   }
   
+  .__iconoo {
+    margin-top: -25px;
+    font-size: 2rem;
+  }
+
   .menu_texto {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -130,6 +154,7 @@
   .tabla {
     margin-top: 30px;
     padding: 1.5rem;
+    height: 250px;
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.244);
   }
   
