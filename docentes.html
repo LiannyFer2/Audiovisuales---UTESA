@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Solicitud de Equipo</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="featuresdocente.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+
+<body>
+  <dialog class="modal" id="modal">
+    <form class="modal-content" method="dialog">
+      <h3 class="modal-title">Audiovisuales y Multimedia</h3>
+      <p>
+        Este formulario se completa aproximadamente en 7 minutos. Uso interno
+        institucional.
+      </p>
+      <ul>
+        <li>
+          Para llenar este formulario, debe tener el correo institucional
+          activo
+        </li>
+        <li>Los servicios se trabajarán por orden de llegada</li>
+      </ul>
+
+      <p>
+        La universidad tecnológiga de santiago, utesa, garantiza el respeto a
+        la intimidad y dignidad en el datos personales.
+      </p>
+
+      <p>
+        Para mayor información comunicarse al
+        <b>(809)-582-7156 ext 262</b> Correo electrónico: adamtburdo@utesa.edu
+      </p>
+
+      <b>Nota: Este formulario debe ser entregado con siete (7) días de
+        anticipación</b>
+      </p>
+      <button class="btn-principal modal-button">Cerrar</button>
+    </form>
+  </dialog>
+
+  <main class="container">
+    <header class="info">
+      <figure>
+        <img src="/logo.jpg" alt="UTESA Logo" />
+      </figure>
+      <div>
+        <h1>Formulario de servicios de Audiovisuales UTESA</h1>
+        <h3>Leer antes de llenar formulario.</h3>
+        <button class="btn-principal cta"><b> Información importante</b></button>
+      </div>
+    </header>
+
+    <form id="form" class="form">
+      <h3>Equipos a solicitar: *</h3>
+
+      <div class="flex-col" id="equipo">
+        <label> <input type="checkbox" name="cProyector" /> Proyector </label><br />
+        <label> <input type="checkbox" name="cLaptop" /> Laptop </label><br />
+        <label>
+          <input type="checkbox" name="cSonido" />
+          Sonido (Solo seleccionar esta opción si se va a proyectar sonido)
+        </label>
+
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+
+      <div class="form-control">
+        <label for="fecha_uso">Fecha de uso</label>
+        <input type="date" name="fechaDeUso" id="fecha" required />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+
+      <div class="aside-inputs">
+        <div class="form-control">
+          <label for="hora_inicio">Hora de inicio</label>
+          <input type="datetime-local" name="horaInicio" id="hora_inicio" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label for="hora_fin">Hora de finalización</label>
+          <input type="datetime-local" name="horaFinal" id="hora_fin" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+      </div>
+
+      <h3>Especificaciones: *</h3>
+
+
+    </form>
+  </main>
+
+  <script type="module" src="/main_docente.js"></script>
+
+</body>
+
+</html>
