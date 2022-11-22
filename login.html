@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            width: 100%;
+        }
+
+        form>div {
+            width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form>input {
+            padding: .5rem
+        }
+
+        form>button {
+            width: 6.225rem;
+            height: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form_login">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <!-- <div>
+            <input type="radio" id="rol_student" name="rol" value="student" checked>
+            <label for="rol_student">Estudiante</label><br>
+            <input type="radio" id="rol_teacher" name="rol" value="teacher">
+            <label for="rol_teacher">Profesor</label><br>
+        </div> -->
+
+
+        <button type="submit">Ingresar</button>
+    </form>
+</body>
+<script type="module" src="/login.js"></script>
+
+</html>
