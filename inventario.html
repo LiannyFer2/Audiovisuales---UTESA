@@ -24,6 +24,24 @@
   </script> -->
 
 <body>
+
+  <dialog class="modal" id="modal">
+    <form class="modal-content" method="dialog" id="crearEquipoForm">
+      <h3 class="modal-title">Crear nuevo equipo</h3>
+
+        <input type="text" placeholder="nombre" />
+        <select class="ticket_select">
+          <option selected value="seleccione">Seleccione</option>
+          <option value="laptop">Laptop</option>
+          <option value="sonido">Sonido</option>
+          <option value="proyector">Proyector</option>
+        </select>
+        <input type="number" placeholder="stock" />
+
+        <button type="submit">crear</button>
+      </form>
+  </dialog>
+
   <div id="container">
     <header class="sesion">
       <h2>Audiovisuales UTESA</h2>
@@ -65,18 +83,7 @@
       </aside>
 
       <section class="ticket">
-        <form id="crearEquipoForm">
-          <input type="text" placeholder="nombre" />
-          <select class="ticket_select">
-            <option selected value="seleccione">Seleccione</option>
-            <option value="laptop">Laptop</option>
-            <option value="sonido">Sonido</option>
-            <option value="proyector">Proyector</option>
-          </select>
-          <input type="number" placeholder="stock" />
-
-          <button type="submit">crear</button>
-        </form>
+        
         <h1>
           <center>Inventario</center>
         </h1>
@@ -85,7 +92,7 @@
           <select class="custom-select" id="inputGroupSelect02" style="height: 30px; margin-left: 250px">
             <option selected value="todos">Todos</option>
           </select>
-          <!-- <button id="btnCrearEquipo">crear equipo</button> -->
+           <button >crear equipo</button> 
         </div>
 
         <div class="tabla">
