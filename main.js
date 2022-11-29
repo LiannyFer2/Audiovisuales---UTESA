@@ -324,13 +324,13 @@ const insertStockInput = async () => {
     option.label = item.nombre;
     return option;
   });
-  const pOptions = sonido.map((item) => {
+  const pOptions = proyectores.map((item) => {
     const option = document.createElement('option');
     option.value = item._id;
     option.label = item.nombre;
     return option;
   });
-  const sOptions = proyectores.map((item) => {
+  const sOptions = sonido.map((item) => {
     const option = document.createElement('option');
     option.value = item._id;
     option.label = item.nombre;
