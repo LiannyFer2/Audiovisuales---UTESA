@@ -15,7 +15,6 @@
 <body>
   <header class="clearfix">
     <div id="logo">
-      //en caso de que no sirva se puede cambiar la direccion a logo.png
       <img src="../img/UTESA.jpg ">
     </div>
     <h1>Reporte Cambio de Turno y Cierre estacion Audiovisuales Edificio C</h1>
@@ -29,11 +28,26 @@
   <div id="reportes">
     <main>
       <button id="crearpdf" class="btn btn-primary" style=" margin-left:10px;  margin-top:10px;"> GENERAR WORD</button>
+      <!-- <table>
+        <thead>
+            <th>Fecha</th>
+            <th>Aula</th>
+            <th>Rol</th>
+            <th>Inicio</th>
+            <th>Fin</th>
+            <th>Equipo</th>
+            <th>Auxiliar</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+      </table> -->
     </main>
   </div>
   <footer>
   </footer>
   <script type="text/javascript" src="reporte.js"></script>
+  <!-- <script type="module" src="reportefe.js"></script> -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       let boton = document.getElementById("crearpdf");
@@ -51,6 +65,7 @@
 
     }, false);
   </script>
+ 
 </body>
 
 </html>
