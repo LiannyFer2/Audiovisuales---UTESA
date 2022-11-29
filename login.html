@@ -8,19 +8,13 @@
     <link rel="stylesheet" href="login.css">
     <title>Login</title>
     <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 90vh;
-            width: 100%;
-        }
+       
 
         form>div {
             width: 300px;
             display: flex;
             justify-content: center;
+           
         }
 
         form>input {
@@ -35,9 +29,24 @@
 </head>
 
 <body>
-    <form class="form_login">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
+    <div class="box">
+    <form autocomplete="off" class="form_login ">
+        <h2>Inicio de sección</h2>
+			<div class="inputBox">
+			<input type="email" name="email" required="required">
+			<span>Correo</span>
+				<i></i>
+			</div>
+
+            <div class="inputBox">
+				<input type="password" name="password" required="required">
+				<span>Contraseña</span>
+				<i></i>
+			</div>
+
+        <!--<input type="email" class="inputBox " name="email" placeholder="Email" required> 
+        <input type="password" class="inputBox" name="password" placeholder="Contraseña" required> -->
+
         <!-- <div>
             <input type="radio" id="rol_student" name="rol" value="student" checked>
             <label for="rol_student">Estudiante</label><br>
@@ -45,9 +54,12 @@
             <label for="rol_teacher">Profesor</label><br>
         </div> -->
 
-
+        <br>
+        <br>
+        
         <button type="submit">Ingresar</button>
     </form>
+    </div>
 </body>
 <script type="module" src="/login.js"></script>
 
